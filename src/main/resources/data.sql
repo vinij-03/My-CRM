@@ -9,9 +9,9 @@ INSERT INTO "COMPANY" (ID, VERSION, NAME) VALUES
 (7, 1, 'Avaya Inc.'),
 (8, 1, 'Laboratory Corporation of America Holdings'),
 (9, 1, 'AutoZone, Inc.'),
-(10, 1, 'Linens ''n Things Inc.');   
+(10, 1, 'Linensn Things Inc.');
 INSERT INTO "CONTACT" (ID, VERSION, EMAIL, FIRST_NAME, LAST_NAME, COMPANY_ID, STATUS_ID) VALUES
-(11, 1, 'eula.lane@jigrormo.ye', 'Eula', 'Lane', 8, 1),
+(11, 3, 'eula.lane@jigrormo.ye', 'Eula', 'Lane', 8, 1),
 (12, 1, 'barry.rodriquez@zun.mm', 'Barry', 'Rodriquez', 7, 5),
 (13, 1, 'eugenia.selvi@capfad.vn', 'Eugenia', 'Selvi', 6, 3),
 (14, 1, 'alejandro.miles@dec.bn', 'Alejandro', 'Miles', 10, 3),
@@ -35,8 +35,7 @@ INSERT INTO "CONTACT" (ID, VERSION, EMAIL, FIRST_NAME, LAST_NAME, COMPANY_ID, ST
 (32, 1, 'bobby.pearson@ib.kg', 'Bobby', 'Pearson', 9, 1),
 (33, 1, 'larry.ciappi@ba.lk', 'Larry', 'Ciappi', 10, 2),
 (34, 1, 'ronnie.salucci@tohhij.lv', 'Ronnie', 'Salucci', 9, 1),
-(35, 1, 'walter.grossi@tuvo.sa', 'Walter', 'Grossi', 9, 1);      
-INSERT INTO "CONTACT"  (ID, VERSION, EMAIL, FIRST_NAME, LAST_NAME, COMPANY_ID, STATUS_ID) VALUES
+(35, 1, 'walter.grossi@tuvo.sa', 'Walter', 'Grossi', 9, 1),
 (36, 1, 'frances.koopmans@foga.tw', 'Frances', 'Koopmans', 7, 5),
 (37, 1, 'frances.fujimoto@uswuzzub.jp', 'Frances', 'Fujimoto', 6, 5),
 (38, 1, 'olivia.vidal@hivwerip.vc', 'Olivia', 'Vidal', 9, 2),
@@ -61,4 +60,5 @@ INSERT INTO "CONTACT"  (ID, VERSION, EMAIL, FIRST_NAME, LAST_NAME, COMPANY_ID, S
 (57, 1, 'mattie.graham@ispaviw.gt', 'Mattie', 'Graham', 7, 2),
 (58, 1, 'bryan.shaw@ha.ee', 'Bryan', 'Shaw', 9, 1),
 (59, 1, 'essie.adams@iliat.cw', 'Essie', 'Adams', 8, 5),
-(60, 1, 'gary.osborne@do.ga', 'Gary', 'Osborne', 7, 5);
+(60, 1, 'gary.osborne@do.ga', 'Gary', 'Osborne', 7, 5),
+(1000, 0, 'cora.tesi@bivo.yt', 'archan ', 'bose', 6, 5);

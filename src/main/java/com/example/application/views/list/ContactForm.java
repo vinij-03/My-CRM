@@ -30,7 +30,7 @@ public class ContactForm extends FormLayout {
   Button save = new Button("Save");
   Button delete = new Button("Delete");
   Button close = new Button("Cancel");
-  // Other fields omitted
+
   Binder<Contact> binder = new BeanValidationBinder<>(Contact.class);
 
   public ContactForm(List<Company> companies, List<Status> statuses) {
@@ -58,23 +58,22 @@ public class ContactForm extends FormLayout {
     save.addClickShortcut(Key.ENTER);
     close.addClickShortcut(Key.ESCAPE);
 
-    save.addClickListener(event -> validateAndSave()); // <1>
-    delete.addClickListener(event -> fireEvent(new DeleteEvent(this, binder.getBean()))); // <2>
-    close.addClickListener(event -> fireEvent(new CloseEvent(this))); // <3>
+    save.addClickListener(event -> validateAndSave());
+    delete.addClickListener(event -> fireEvent(new DeleteEvent(this, binder.getBean())));
+    close.addClickListener(event -> fireEvent(new CloseEvent(this)));
 
-    binder.addStatusChangeListener(e -> save.setEnabled(binder.isValid())); // <4>
+    binder.addStatusChangeListener(e -> save.setEnabled(binder.isValid()));
     return new HorizontalLayout(save, delete, close);
   }
 
   private void validateAndSave() {
-    if(binder.isValid()) {
-      fireEvent(new SaveEvent(this, binder.getBean())); // <6>
+    if (binder.isValid()) {
+      fireEvent(new SaveEvent(this, binder.getBean()));
     }
   }
 
-
   public void setContact(Contact contact) {
-    binder.setBean(contact); // <1>
+    binder.setBean(contact);
   }
 
   // Events
@@ -101,7 +100,6 @@ public class ContactForm extends FormLayout {
     DeleteEvent(ContactForm source, Contact contact) {
       super(source, contact);
     }
-
   }
 
   public static class CloseEvent extends ContactFormEvent {
@@ -117,10 +115,8 @@ public class ContactForm extends FormLayout {
   public Registration addSaveListener(ComponentEventListener<SaveEvent> listener) {
     return addListener(SaveEvent.class, listener);
   }
+
   public Registration addCloseListener(ComponentEventListener<CloseEvent> listener) {
     return addListener(CloseEvent.class, listener);
   }
-
-
 }
-
